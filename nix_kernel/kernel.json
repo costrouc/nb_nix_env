@@ -1,0 +1,4 @@
+{
+ "argv": ["python","-m","nix_kernel", "-f", "{connection_file}"],
+ "display_name": "Nix Meta Kernel"
+}
