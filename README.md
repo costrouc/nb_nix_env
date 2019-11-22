@@ -1,13 +1,21 @@
-# Nix Meta Kernel
+# nb_nix_kernels
 
-Install the kernel via jupyter. This will install the kernel into `~/.local/share/jupyter/kernels/nix_kernel`.
-
-```shell
-jupyter kernelspec install ./nix_kernel --user
-```
-
-Now launch jupyter lab and select the nix_kernel
+The nix way
 
 ```shell
-jupyter lab
+nix-shell
 ```
+
+or the other way
+
+```shell
+pip install . --user
+```
+
+Add to `~/.jupyter/jupyter_notebook_config.py` 
+
+```python
+c.NotebookApp.kernel_spec_manager_class = 'nb_nix_kernels.NixKernelSpecManager'
+```
+
+
