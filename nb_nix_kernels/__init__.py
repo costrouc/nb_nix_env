@@ -1,23 +1,3 @@
-'''
-%%javascript
-// only have to run once
-var kernel_name = btoa(`
-nix-shell -p python3Packages.ipykernel
-             python3Packages.numpy
-             python3Packages.scipy
-             python3Packages.flask
-             nodejs
-            --run "python3 -m ipykernel -f {connection_file}"
-`).replace('=', '_');
-
-IPython.kernelselector.kernelspecs[kernel_name] = {
-    name: kernel_name,
-    spec: {display_name: "nix-env", language: "python"},
-    resources: {}
-};
-IPython.kernelselector.set_kernel(kernel_name);
-'''
-
 import base64
 import shlex
 
