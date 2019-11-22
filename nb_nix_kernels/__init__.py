@@ -12,7 +12,7 @@ nix-shell -p python3Packages.ipykernel
 
 IPython.kernelselector.kernelspecs[kernel_name] = {
     name: kernel_name,
-    spec: {display_name: kernel_name, language: "python"},
+    spec: {display_name: "nix-env", language: "python"},
     resources: {}
 };
 IPython.kernelselector.set_kernel(kernel_name);
